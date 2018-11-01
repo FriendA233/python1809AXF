@@ -1,14 +1,19 @@
 from django.shortcuts import render
 
 # Create your views here.
-from axf.models import Wheel
+from axf.models import Wheel, Nav, Mustbuy
 
 
 def home(request):     #首页
     #轮播图数据
     wheels = Wheel.objects.all()
 
-    return render(request,'home/home.html',context={'wheels':wheels})
+    #导航数据
+    navs = Nav.objects.all()
+
+    #每日必购
+    mustbuys = Mustbuy.objects.all()
+    return render(request,'home/home.html',context={'wheels':wheels,'navs':navs,'mustbuys':mustbuys})
 
 
 def market(request):    #超市
