@@ -1,11 +1,24 @@
 {% extends 'base/base.html' %}
-
-
+{% load static %}
+{% block extcss %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
 {% block title %}
-    爱鲜峰  |  首页
+    爱鲜峰 | 首页
 {% endblock %}
 
-
 {% block content %}
-    首页
+{#    <div class="home">#}
+{#    轮播图#}
+{#    <div class="swiper-container" id="topSwiper">#}
+{#        <div class="swiper-wrapper">#}
+{#            {% for wheel in wheels %}#}
+{#            <div class="swiper-slide">#}
+{#                <img src="{{ wheel.img }}" alt="">#}
+{#            </div>#}
+{#             {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+
+{#    </div>#}
 {% endblock %}
