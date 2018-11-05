@@ -116,6 +116,32 @@ class Goods(models.Model):
 
 
 
+# 用户注册表
+class User(models.Model):
+    # 账号
+    account = models.CharField(max_length=80,unique=True)
+    # 密码
+    password = models.CharField(max_length=256)
+    #名字
+    name = models.CharField(max_length=100)
+    #手机号
+    phone = models.CharField(max_length=100,unique=True)
+    #地址
+    addr = models.CharField(max_length=256)
+    #头像
+    img = models.CharField(max_length=100)
+    #等级
+    rank = models.IntegerField(default=1)
+    #token
+    token = models.CharField(max_length=256)
+
+    class Meta:
+        db_table='axf_user'
+
+
+
+
+
 
 
 
