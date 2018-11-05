@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block extcss %}
+    <link rel="stylesheet" href="{% static 'mine/css/register.css' %}">
+{% endblock %}
+{% block title %}
+    爱鲜峰 | 注册
+{% endblock %}
+
+{% block content %}
+    <div class="register">
+    <div class="close"><a href="#" class="glyphicon glyphicon-remove"></a> </div>
+        <form action="#" enctype="multipart/form-data">
+            <div class="input-group">
+                <div>
+                    账号<input type="text" placeholder="账号长度为6～12位字符" style="width: 16.1rem">
+                </div>
+                <div>
+                    密码<input type="text" placeholder="账号长度为6～12位字符" style="width: 16.1rem">
+                </div>
+                <div>
+                    验证<input type="text" placeholder="账号长度为6～12位字符" style="width: 16.1rem">
+                </div>
+                <div>
+                    昵称<input type="text" style="width: 16.1rem">
+                </div>
+                <div>
+                    电话<input type="text" style="width: 16.1rem">
+                </div>
+                <div>
+                    账号<input type="text" style="width: 16.1rem">
+                </div>
+                <div>
+                    <span style="position: relative ;float: left">头像</span><input type="file" style="position: relative; float: left">
+                </div>
+                <div>
+                    <button>注册</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -32,6 +32,7 @@ footer .mine dd {
 }
 .mine .user-wrapper .user-content p{
     line-height: 2rem;
+
 }
 .mine .user-wrapper .user-content span{
     padding-right: 0.4rem;
@@ -51,7 +52,9 @@ footer .mine dd {
     background: #f0e000;
     text-align: center;
 }
-.mine .collect span,
+.mine .collect span{
+    font-weight: bold;
+}
 .mine .collect .glyphicon{
     vertical-align: middle;
 }
@@ -67,6 +70,7 @@ footer .mine dd {
     padding: 0 0.4rem;
     height: 3rem;
     line-height: 3rem;
+    background: white;
 }
 .mine .other .my span{
     float: left;
@@ -95,6 +99,7 @@ footer .mine dd {
 
 
 .mine .other .quit{
+    background: white;
     text-align: center;
 }
 .mine .other .quit a{

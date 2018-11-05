@@ -127,3 +127,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
     ]
+
+MDEIA_ROOT = os.path.join(BASE_DIR,'static/mine/upfile')

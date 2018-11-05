@@ -1,0 +1,47 @@
+/*.login .err{*/
+    /*color: red;*/
+/*}*/
+
+/*.login form{*/
+    /*padding: 0 1rem;*/
+/*}*/
+/*.login form .input-group{*/
+    /*margin: 0.5rem 0;*/
+/*}*/
+
+/*.login .back{*/
+    /*text-align: right;*/
+/*}*/
+/*.login .back a{*/
+    /*font-size: 1.5rem;*/
+/*}*/
+
+/*.login .login-wrapper .btn{*/
+    /*width: 100%;*/
+/*}*/
+/*#subButton {*/
+    /*width: 100%;*/
+/*}*/
+.login{
+    margin-top: 3rem;
+}
+.login .close{
+    width: 100%;
+}
+.login .close a{
+    position: relative;
+    float: right;
+}
+.login .input-group div{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.login .input-group button{
+    width: 12rem;
+    margin-top: 5rem;
+    margin-left: 3rem;
+    background: blue;
+    font-size: 24px;
+    border-radius: 10px;
+    color: white;
+}

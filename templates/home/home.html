@@ -47,5 +47,87 @@
             
         </div>
     </div>
+    
+{#    商品部分#}
+    <div class="shop">
+        <div class="shophead">
+            <a href="#">
+                <img src="{{ shophead.img }}">
+            </a>
+        </div>
+        <div class="shoptab">
+            {% for tab in shoptab %}
+                <a href="#">
+                <img src="{{ tab.img }}">
+                </a>
+            {% endfor %}
+
+        </div>
+        <ul class="shopclass">
+            {% for item in shopclass %}
+                <li>
+                <a href="#">
+                    <img src="{{ item.img }}">
+                </a>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul class="shopcommend">
+            {% for item in shopcommend %}
+                <li>
+                <a href="#">
+                    <img src="{{ item.img }}">
+                </a>
+                </li>
+            {% endfor %}
+            
+        </ul>
+    </div>
+
+{#    商品主体#}
+    <div class="main">
+        {% for mianshow in mianshows %}
+        <div class="main-wrapper">
+        <div class="title">
+            {{ mianshow.name }}
+            <a href="#">更多</a>
+            <span></span>
+        </div>
+        <div class="headimg">
+            <img src="{{ mianshow.img }}">
+        </div>
+        <div class="shoplist">
+            <div class="shopitem">
+                <a href="#">
+                    <img src="{{ mianshow.img1 }}" alt="" class="img">
+                    <span class="desc">{{ mianshow.longname1 }}</span>
+                    <span class="price">{{ mianshow.price1 }}</span>
+                    <span class="marketprice">{{ mianshow.marketprice1 }}</span>
+                </a>
+                <button><span>+</span></button>
+            </div>
+            <div class="shopitem">
+                <a href="#">
+                    <img src="{{ mianshow.img2 }}" alt="" class="img">
+                    <span class="desc">{{ mianshow.longname2 }}</span>
+                    <span class="price">{{ mianshow.price2 }}</span>
+                    <span class="marketprice">{{ mianshow.marketprice2 }}</span>
+                </a>
+                <button><span>+</span></button>
+            </div>
+            <div class="shopitem">
+                <a href="#">
+                    <img src="{{ mianshow.img3 }}" alt="" class="img">
+                    <span class="desc">{{ mianshow.longname3 }}</span>
+                    <span class="price">{{ mianshow.price3 }}</span>
+                    <span class="marketprice">{{ mianshow.marketprice3 }}</span>
+                </a>
+                <button><span>+</span></button>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+    
+    </div>
     </div>
 {% endblock %}
