@@ -146,7 +146,19 @@ def login(request):
     if request.method == 'GET':
         return render(request,'mine/login.html')
     elif request.method == 'POST':
-        pass
+        account = request.POST.get('account')
+        password = request.POST.get('password')
+        try:
+            user = User.objects.get(account=account)
+            if user.password == genarate_password(password):#登陆成功
+                user.token = str(uuid.uuid5(uuid.uuid4(),'login'))
+                user.save()
+                request.session['token'] = user.token
+                return redirect('axf:mine')
+            else:#登陆失败
+                return render(request, 'mine/login.html', context={'Passworderr': '密码不存在'})
+        except:
+            return render(request,'mine/login.html',context={'Accounterr':'账号不存在'})
 
 
 
@@ -169,3 +181,7 @@ def checkaccount(request):
 def logout(request):
     request.session.flush()
     return redirect('axf:mine')
+
+
+def addcart(request):
+    return JsonResponse('添加购物车成功')

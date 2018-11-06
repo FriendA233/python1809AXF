@@ -27,7 +27,7 @@
                     <input type="text" class="form-control" placeholder="账号" name="account" required="required">
                      <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
-                <i></i>
+                <i>{{ Accounterr }}</i>
             </div>
             {#            密码#}
             <div class="form-group" id="password">
@@ -36,9 +36,12 @@
                     <input type="password" class="form-control" placeholder="6~12位" name="password" required="required">
                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
-                <i></i>
+                <i>{{ Passworderr }}</i>
             </div>
-            <input type="submit" id="subButton" value="登陆">
+{#            <input type="submit" id="subButton" value="登陆">#}
+            <div id="subButton" class="btn btn-default">
+                登陆
+            </div>
     </form>
     </div>
 {% endblock %}

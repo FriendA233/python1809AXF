@@ -78,4 +78,11 @@ $(function () {
         $('#sortBt i').removeClass('glyphicon glyphicon-triangle-bottom').addClass('glyphicon glyphicon-triangle-top')
     }
 
+
+//    购物车操作
+    $('.bt-wrapper .glyphicon-minus').hide()
+    $('.bt-wrapper .num').hide()
+
+//
+
 })

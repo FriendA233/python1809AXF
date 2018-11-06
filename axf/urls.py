@@ -11,5 +11,6 @@ urlpatterns = [
     url('^register2/$',views.register2,name='register2'),
     url('^login/$',views.login,name='login'),
     url('^checkaccount/$',views.checkaccount,name='checkaccount'),#账号验证
-    url('^logout/$',views.logout,name='logout')
+    url('^logout/$',views.logout,name='logout'),
+    url('^addcart/$',views.addcart,name='addcart') #添加购物车操作
 ]
