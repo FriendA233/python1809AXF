@@ -54,6 +54,7 @@ $(function () {
         categoryviewHide()
         sortviewHide()
     })
+
     function categoryviewShow() {
         sortBt = false
         sortviewHide()
@@ -83,6 +84,54 @@ $(function () {
     $('.bt-wrapper .glyphicon-minus').hide()
     $('.bt-wrapper .num').hide()
 
-//
+//    有商品数据的,即要显示,否则不显示
+    $('.bt-wrapper .num').each(function () {
+        var num = parseInt($(this).html())
+        if (num){
+            $(this).show()
+            $(this).prev().show()
+        }
+    })
 
+//   加操作
+    $('.bt-wrapper .glyphicon-plus').click(function () {
+        //商品ID
+        var goodsid = $(this).attr('goodsid')
+        //that为了解决ajax中this的问题
+        var $that = $(this)
+        $.get('/addcart/', {'goodsid': goodsid}, function (response) {
+            console.log(response)
+            if (response.status == -1) {
+                window.open('/login/', target = '_self')
+            }
+            else if (response.status == 1) {
+                //错误的!!!!
+                // $('.bt-wrapper .glyphicon-minus').show()
+                // $('.bt-wrapper .num').show().html(response.number)
+                //    只修改当前的
+                // $(this).prev().show().html(response.number)
+                // $(this).prev().prev().show()
+                $that.prev().show().html(response.number)
+                $that.prev().prev().show()
+            }
+        })
+    })
+//    减操作
+    $('.bt-wrapper .glyphicon-minus').click(function () {
+        var goodsid = $(this).attr('goodsid')
+        var $that = $(this)
+    //    发起ajax请求
+        $.get('/subcart/',{'goodsid':goodsid},function (response) {
+            console.log(response)
+            if(response.status==1){
+                var number = response.number
+                if(number > 0){  //显示
+                    $that.next().html(number)
+                }else {  //隐藏
+                    $that.next().hide()
+                    $that.hide()
+                }
+            }
+        })
+    })
 })
